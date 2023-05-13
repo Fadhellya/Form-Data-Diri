@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/txttitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Form Mahasiswa"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imgbintang"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/txttitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:src="@android:drawable/star_big_on" />
+
+        <TableLayout
+            android:id="@+id/tbl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgbintang"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+
+            >
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/txtnobp"
+                    android:text="No BP :"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editnobp"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/shape_border"
+                    android:hint="Masukkan No Bp"
+                    android:textColorHint="@color/teal_700"
+                    android:textSize="14sp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/txtnama"
+                    android:text="Nama :"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editnama"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/shape_border"
+                    android:hint="Masukkan Nama"
+                    android:textColorHint="@color/teal_700"
+                    android:textSize="14sp" />
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/txtjekel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tbl1"
+            android:layout_marginStart="20sp"
+            android:text="Jenis Kelamin : "
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rgjekel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtjekel"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rblaki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laki - Laki"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/rbperempuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Perempuan"
+                android:textStyle="bold" />
+
+        </RadioGroup>
+
+        <TableLayout
+            android:id="@+id/tbl2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rgjekel"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/txthoby"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hobby : "
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/chkbulutangkis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bulutangkis" />
+
+                <CheckBox
+                    android:id="@+id/chkcatur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Catur" />
+
+                <CheckBox
+                    android:id="@+id/chkwarnet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Warnet" />
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/chkmembaca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Membaca" />
+
+                <CheckBox
+                    android:id="@+id/chkberenang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Berenang" />
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/txttgllahir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tbl2"
+            android:layout_marginLeft="20dp"
+            android:text="Tanggal Lahir"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <DatePicker
+            android:id="@+id/datetgllahir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txttgllahir"
+            android:layout_centerHorizontal="true"
+            android:datePickerMode="spinner" />
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tbl3"
+            android:layout_below="@id/datetgllahir"
+            android:layout_marginTop="20dp">
+            <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtprodi"
+            android:text="Prodi : "
+            android:layout_marginStart="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <Spinner
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtprodi"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/spinprodi"
+            />
+            </TableRow>
+        </TableLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tbl3"
+            android:layout_centerHorizontal="true"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:id="@+id/btnsubmit"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtoutput"
+            android:layout_below="@id/btnsubmit"
+            android:text="Output : "
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            />
+    </RelativeLayout>
+</ScrollView>
